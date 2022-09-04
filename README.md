@@ -8,7 +8,7 @@ In particular, the aim of the course is to apply complex circuit design techniqu
 The hardware component to be designed should implement a simplified version of the [Histogram equalization](https://en.wikipedia.org/wiki/Histogram_equalization). Full **description of the assignment** is available [here](/PFRL_Specifica_20_21_V3.pdf) (in italian).
 
 ## Solution
-The implementation consists of a finite state machine which determins the phases of the following datapath containing all the needed components for the computation of the histogram equalization algorithm.
+The implementation consists of a finite state machine that determins the phases of the following datapath containing all the needed components for the computation of the histogram equalization algorithm.
 
 A detailed **explanation** of the whole implementation is available [here](/report.pdf) (in italian).
 
