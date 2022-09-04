@@ -5,7 +5,7 @@ It consists in designing and developing a module using the VHDL language given a
 In particular, the aim of the course is to apply complex circuit design techniques using the VHDL language and synthesis tools used for the development of FPGAs using Xilinx VIVADO software.
 
 ## Assignment 
-The hardware component to be designed should implement a simplified version of the [Histogram equalization](https://en.wikipedia.org/wiki/Histogram_equalization). Full **description of the assignment** is available [here](/PFRL_Specifica_20_21_V3.pdf) (in italian).
+The hardware component to be designed should implement a simplified version of the [histogram equalization algorithm](https://en.wikipedia.org/wiki/Histogram_equalization). Full **description of the assignment** is available [here](/PFRL_Specifica_20_21_V3.pdf) (in italian).
 
 ## Solution
 The implementation consists of a finite state machine that determins the phases of the following datapath containing all the needed components for the computation of the histogram equalization algorithm.
