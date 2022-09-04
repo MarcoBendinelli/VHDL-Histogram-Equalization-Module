@@ -2,7 +2,7 @@
 --
 -- University: Politecnico di Milano
 -- Professors: William Fornaciari, Federico Terraneo
--- Students: Bendinelli Marco (10673478), Bosisio Andrea (10669287)
+-- Students: Bendinelli Marco, Bosisio Andrea
 -- Create Date: 02.03.2021 23:09:39
 -- Project Name: Prova Finale del corso di Reti Logiche A.A. 2020/2021
 -- 
