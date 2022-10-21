@@ -1,4 +1,5 @@
 # Prova Finale Reti Logiche 2020-2021
+[![License: MIT][license-image]][license]
 This is the project for the *Prova Finale* of the course _Reti Logiche_ held at Politecnico di Milano.
 It consists in designing and developing a module using the VHDL language given a natural language specification of its operation. 
 
@@ -19,3 +20,6 @@ A detailed **explanation** of the whole implementation is available [here](/repo
 
 ## Final Grade 
 This project has obtained the following evaluation: *30/30*.
+
+[license]: https://github.com/MarcoBendinelli/Reti-Logiche-project-2021/new/main
+[license-image]: https://img.shields.io/badge/License-MIT-blue.svg
