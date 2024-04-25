@@ -1,13 +1,33 @@
-# Prova Finale Reti Logiche 2020-2021
-[![License: MIT][license-image]][license]
+# Logical Networks :floppy_disk:
 
-This is the project for the *Prova Finale* of the course _Reti Logiche_ held at Politecnico di Milano.
-It consists in designing and developing a module using the VHDL language given a natural language specification of its operation. 
+This project involves the design and development of a **VHDL** module based on a natural language specification of its operation.
 
-In particular, the aim of the course is to apply complex circuit design techniques using the VHDL language and synthesis tools used for the development of FPGAs using Xilinx VIVADO software.
+The primary goal is to apply advanced circuit design techniques using VHDL and synthesis tools commonly used for **FPGA** development, particularly leveraging Xilinx VIVADO software.
 
-## Assignment 
-The hardware component to be designed should implement a simplified version of the [histogram equalization algorithm](https://en.wikipedia.org/wiki/Histogram_equalization). Full **description of the assignment** is available [here](/PFRL_Specifica_20_21_V3.pdf) (in italian).
+The synthesis process is also explored, which converts the VHDL code into a configuration bitstream for FPGA programming.
+
+## Histogram Equalization for Image Processing
+
+[Histogram equalization algorithm](https://en.wikipedia.org/wiki/Histogram_equalization) is a technique designed to recalibrate the contrast of an image when the intensity value range is very close, by distributing it across the entire intensity range to increase the contrast.
+
+In the developed version, the standard algorithm is not implemented but rather a simplified version of it. The equalization algorithm will only be applied to grayscale images with 256 levels, and it must transform each pixel as follows:
+
+```plaintext
+DELTA_VALUE = MAX_PIXEL_VALUE – MIN_PIXEL_VALUE
+SHIFT_LEVEL = (8 – FLOOR(LOG2(DELTA_VALUE +1)))
+TEMP_PIXEL = (CURRENT_PIXEL_VALUE - MIN_PIXEL_VALUE) << SHIFT_LEVEL
+NEW_PIXEL_VALUE = MIN(255, TEMP_PIXEL)
+```
+
+Where MAX_PIXEL_VALUE and MIN_PIXEL_VALUE are the maximum and minimum pixel values of the image, CURRENT_PIXEL_VALUE is the value of the pixel to be transformed, and NEW_PIXEL_VALUE is the value of the new pixel.
+
+The module reads the image from a memory where the image to be processed is stored sequentially, row by row. Each byte corresponds to a pixel of the image.
+
+The size of the image is defined by 2 bytes, stored starting from address 0. The byte at address 0 refers to the column dimension, and the byte at address 1 refers to the row dimension. The maximum size of the image is 128x128 pixels.
+
+The image is stored starting from address 2 and in contiguous bytes. Therefore, the byte at address 2 is the first pixel of the first row of the image.
+
+Full **description of the assignment** is available [here](/PFRL_Specifica_20_21_V3.pdf) (in italian).
 
 ## Solution
 The implementation consists of a finite state machine that determins the phases of the following datapath containing all the needed components for the computation of the histogram equalization algorithm.
@@ -18,9 +38,3 @@ A detailed **explanation** of the whole implementation is available [here](/repo
 ![datapath](img/DATAPATH.jpg)
 ## FSM
 ![FSM](/img/FSM.png)
-
-## Final Grade 
-This project has obtained the following evaluation: *30/30*.
-
-[license]: https://github.com/MarcoBendinelli/Reti-Logiche-project-2021/new/main
-[license-image]: https://img.shields.io/badge/License-MIT-blue.svg
